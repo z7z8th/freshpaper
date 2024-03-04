@@ -141,12 +141,12 @@ class FreshPaper:
                 0,
                 win32con.KEY_SET_VALUE,
             )
-            win32api.RegSetValueEx(key, "WallpaperStyle", 0, win32con.REG_SZ, "10")
-            win32api.RegSetValueEx(key, "TileWallpaper", 0, win32con.REG_SZ, "0")
+            # win32api.RegSetValueEx(key, "WallpaperStyle", 0, win32con.REG_SZ, "10")
+            # win32api.RegSetValueEx(key, "TileWallpaper", 0, win32con.REG_SZ, "0")
             win32gui.SystemParametersInfo(
                 win32con.SPI_SETDESKWALLPAPER, bmp_img_path, 1 + 2
             )
-            os.remove(bmp_img_path)
+            # os.remove(bmp_img_path)
         elif sys.platform.startswith("darwin"):
             try:
                 command = """
@@ -308,8 +308,10 @@ freshpaper_sources = {
     type=click.Choice(freshpaper_sources.keys()),
     help="Source for setting the wallpaper.",
 )
+
 def main(ctx, source):
     if ctx.invoked_subcommand is None:
+        log.info('source ' + source)
         source_class = freshpaper_sources.get(source)
         source = source_class()
         source.refresh_wallpaper()

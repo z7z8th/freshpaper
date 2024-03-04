@@ -31,13 +31,13 @@ Installation
 
 ::
 
-    $ pip install freshpaper
+    $ pip install freshpaper_fixed
 
 Update to latest release:
 
 ::
 
-    $ pip install -U freshpaper
+    $ pip install -U freshpaper_fixed
 
 
 Usage
