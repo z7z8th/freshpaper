@@ -7,7 +7,7 @@ import logging
 from random import choice
 from datetime import datetime
 from subprocess import check_call, CalledProcessError
-from PIL import Image
+# from PIL import Image
 
 try:
     # for python3
@@ -131,9 +131,10 @@ class FreshPaper:
 
         if sys.platform.startswith("win32"):
 
-            bmp_image = Image.open(image_path)
-            bmp_img_path = os.path.splitext(image_path)[0] + ".bmp"
-            bmp_image.save(bmp_img_path, "BMP")
+            # bmp_image = Image.open(image_path)
+            # bmp_img_path = os.path.splitext(image_path)[0] + ".bmp"
+            # bmp_image.save(bmp_img_path, "BMP")
+            bmp_img_path = image_path
             key = win32api.RegOpenKeyEx(
                 win32con.HKEY_CURRENT_USER,
                 "Control Panel\\Desktop",
