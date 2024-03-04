@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "freshpaper_fixed"
-version = "1.2.3"
+version = "1.2.4"
 description = "Program to automatically set Bing's `Photo of the day`, NASA, NAT_Geo or Unsplash_Random as your Desktop's wallpaper."
 authors = ["Rohit Gupta <rohitgtech+git@gmail.com>", "ybzhao1989@hotmail.com"]
 license = "BSD-3-Clause"
